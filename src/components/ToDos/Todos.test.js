@@ -20,4 +20,12 @@ describe('Todos Component', () => {
   it('Should contain two todo subcomponents', () => {
     expect(component.find(Todo).length).toBe(2)
   })
+
+  it('Should render the todo list tasks', () => {
+    component.find(Todo).forEach((todo, idx) => {
+      expect(todo.find('.task-name').text()).toBe(listItems[idx].task)
+    })
+  })
+
+  
 })

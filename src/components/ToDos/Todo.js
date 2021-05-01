@@ -3,7 +3,7 @@ import React from 'react';
 const Todo = ({ task }) => {
   return (
     <div>
-      <div></div>
+      <div className="task-name">{task.task}</div>
     </div>
   )
 }
