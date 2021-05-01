@@ -1,16 +1,19 @@
 import React from 'react';
 
 class Counter extends React.Component {
-  state = {
-    number: 0,
+  constructor() {
+    super()
+    this.state = {
+      number: 0,
+    }
   }
 
   add = () => {
-    this.setState( prevState => { prevState.number ++ })
+    this.setState( {number: this.state.number += 1})
   }
 
   subtract = () => {
-    this.setState(prevState => { prevState.number -- })
+    this.setState({number: this.state.number -= 1})
   }
 
   render () {
