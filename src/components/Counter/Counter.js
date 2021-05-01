@@ -10,6 +10,13 @@ class Counter extends React.Component {
       <div>
         <h1>Counter</h1>
         <p className="number">{this.state.number}</p>
+        <div>
+          <button 
+            className="plus"
+            onClick={()=> this.state.number += 1}
+            >+</button>
+          <button></button>
+        </div>
       </div>
     )
   }
