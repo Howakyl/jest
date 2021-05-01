@@ -5,6 +5,14 @@ class Counter extends React.Component {
     number: 0,
   }
 
+  add = () => {
+    this.setState( prevState => { prevState.number ++ })
+  }
+
+  subtract = () => {
+    this.setState(prevState => { prevState.number -- })
+  }
+
   render () {
     return (
       <div>
@@ -13,13 +21,13 @@ class Counter extends React.Component {
         <div>
           <button 
             className="plus"
-            onClick={()=> this.state.number += 1}
+            onClick={this.add}
             >
               +
             </button>
           <button
             className="minus"
-            onClick={() => this.state.number -= 1}
+            onClick={this.subtract}
           >
             -
           </button>
