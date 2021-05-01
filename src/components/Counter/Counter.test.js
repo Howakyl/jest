@@ -18,7 +18,7 @@ describe('Counter component', () => {
     expect(component.state('number')).toEqual(0)
   })
 
-  // it('should display the current number in an element with the className number', () => {
-  //   expect(component.find('.number').text()).toEqual("0")
-  // })
+  it('should display the current number in an element with the className number', () => {
+    expect(component.find('.number').text()).toEqual("0")
+  })
 })
