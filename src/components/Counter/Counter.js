@@ -14,8 +14,15 @@ class Counter extends React.Component {
           <button 
             className="plus"
             onClick={()=> this.state.number += 1}
-            >+</button>
-          <button></button>
+            >
+              +
+            </button>
+          <button
+            className="minus"
+            onClick={() => this.state.number -= 1}
+          >
+            -
+          </button>
         </div>
       </div>
     )

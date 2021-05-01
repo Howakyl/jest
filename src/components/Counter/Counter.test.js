@@ -10,20 +10,30 @@ describe('Counter component', () => {
     component = shallow(<Counter />)
   })
 
+  // 1)
   it('should have a header that says "Counter"', () => {
     expect(component.contains(<h1>Counter</h1>)).toBe(true)
   })
 
+  // 2)
   it('should have a state attribute called number initialized to zero', () => {
     expect(component.state('number')).toEqual(0)
   })
 
+  // 3)
   it('should display the current number in an element with the className number', () => {
     expect(component.find('.number').text()).toEqual("0")
   })
 
+  // 4)
   it('should have a button with a class plus that increases the number in state', () => {
     component.find('.plus').simulate('click')
     expect(component.state('number')).toEqual(1)
+  })
+
+  // 5)
+  it('should have a button with a class minus that decreases the number in state', () => {
+    component.find('.minus').simulate('click')
+    expect(component.state('number')).toEqual(-1)
   })
 })
