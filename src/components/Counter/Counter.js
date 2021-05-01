@@ -9,11 +9,11 @@ class Counter extends React.Component {
   }
 
   add = () => {
-    this.setState( {number: this.state.number += 1})
+    this.setState( {number: this.state.number + 1})
   }
 
   subtract = () => {
-    this.setState({number: this.state.number -= 1})
+    this.setState({number: this.state.number - 1})
   }
 
   render () {
