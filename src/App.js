@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld';
 import Counter from './components/Counter/Counter';
+import Todos from './components/ToDos/Todos';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         </a>
       <HelloWorld name="Kyle"/>
       <Counter />
+      {/* <Todos /> */}
       </header>
     </div>
   );
