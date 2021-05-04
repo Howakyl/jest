@@ -27,5 +27,9 @@ describe('Todos Component', () => {
     })
   })
 
-  
+  it('Should have a state attribute for the new todo that should update when the user types in an input', () => {
+    expect(component.state('newTodo')).toBe('')
+    component.find('input').simulate('change', {target: {value: 'hello'}})
+    expect(component.state('newTodo')).toBe('hello')
+  })
 })
