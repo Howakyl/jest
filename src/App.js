@@ -26,8 +26,10 @@ function App() {
           Learn React
         </a>
       <HelloWorld name="Kyle"/>
-      <Counter />
-      <Todos tasks={listItems}/>
+      <div className="testing-container">
+        <Counter />
+        <Todos tasks={listItems}/>
+      </div>
       </header>
     </div>
   );

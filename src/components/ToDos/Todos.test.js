@@ -32,4 +32,10 @@ describe('Todos Component', () => {
     component.find('input').simulate('change', {target: {value: 'hello'}})
     expect(component.state('newTodo')).toBe('hello')
   })
+
+  it('should create a new todo on the click of a button and update the UI with it', () => {
+    component.find('.new-todo').simulate('click')
+    expect(component.state('toDos').length).toBe(3)
+    expect(component.find(Todo).length).toBe(3)
+  })
 })
