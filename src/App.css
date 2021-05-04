@@ -33,6 +33,11 @@
   justify-content: space-between;
 }
 
+.todo-container {
+  display: flex;
+  margin-left: 30px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

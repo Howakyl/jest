@@ -17,10 +17,19 @@ class Todos extends Component {
     console.log(this.state.newTodo)
   };
 
-  createToDo = (e) => {
+  createToDo = () => {
     this.setState(prevState => ({
       newTodo: '',
       toDos: [...prevState.toDos, {task: prevState.newTodo, done: false}],
+    }))
+  }
+
+  markComplete = (todo) => {
+    this.setState(prevState => ({
+      toDos: prevState.toDos.map(item => {
+        if (item == todo) item.done = !item.done
+        return item
+      })
     }))
   }
 
@@ -33,9 +42,9 @@ class Todos extends Component {
           />
           <button
             onClick={this.createToDo} className="new-todo"
-          >create new To Do</button>
+          >create</button>
         {this.state.toDos.map((task, idx) => (
-          <Todo task={task} key={idx} />
+          <Todo task={task} key={idx} markComplete={this.markComplete}/>
           ))
         }
       </div>
