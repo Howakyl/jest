@@ -7,6 +7,11 @@ import Todos from './components/ToDos/Todos';
 function App() {
 
 
+  const listItems = [
+    {task: 'create lesson', done: false},
+    {task: 'clean apartment', done: false}
+  ]
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +27,7 @@ function App() {
         </a>
       <HelloWorld name="Kyle"/>
       <Counter />
-      {/* <Todos /> */}
+      <Todos tasks={listItems}/>
       </header>
     </div>
   );
