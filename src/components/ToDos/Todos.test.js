@@ -38,4 +38,9 @@ describe('Todos Component', () => {
     expect(component.state('toDos').length).toBe(3)
     expect(component.find(Todo).length).toBe(3)
   })
+
+  // it('should mark todos as done on the click of a button', () => {
+  //   component.find('.done').simulate('click')
+  //   expect
+  // })
 })
