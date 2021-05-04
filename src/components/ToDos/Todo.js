@@ -4,7 +4,7 @@ const Todo = ({ task, markComplete }) => {
   return (
     <div>
       <button className='mark-done' onClick={e => markComplete(task)}>Completed</button>
-      <div className="task-name" done={markComplete}>{task.task}</div>
+      <div className={`task-name ${task.done ? 'checked': 'unchecked'}`}>{task.task}</div>
     </div>
   )
 }
