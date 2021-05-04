@@ -17,6 +17,12 @@ class Todos extends Component {
     console.log(this.state.newTodo)
   };
 
+  createToDo = (e) => {
+    this.setState(prevState => ({
+      newTodo: '',
+      toDos: [...prevState.toDos, {task: prevState.newTodo, done: false}],
+    }))
+  }
 
   render () {
     return (
@@ -25,6 +31,9 @@ class Todos extends Component {
           type="text"
           onChange={this.handleChange}
           />
+          <button
+            onClick={this.createToDo} className="new-todo"
+          >create new To Do</button>
         {this.state.toDos.map((task, idx) => (
           <Todo task={task} key={idx} />
           ))
