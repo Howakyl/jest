@@ -27,7 +27,7 @@ class Todos extends Component {
   markComplete = (todo) => {
     this.setState(prevState => ({
       toDos: prevState.toDos.map(item => {
-        if (item == todo) item.done = !item.done
+        if (item === todo) item.done = !item.done
         return item
       })
     }))

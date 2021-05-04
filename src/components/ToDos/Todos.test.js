@@ -43,4 +43,11 @@ describe('Todos Component', () => {
     component.find('.mark-done').at(0).simulate('click')
     expect(component.state('toDos').filter(task => task.done).length).toBe(1)
   })
+
+  it('should have todos with the class checked if they are done and unchecked if they are not done', () => {
+    let todos = component.state('toDos')
+    component.find(Todo).forEach((todo, idx) => {
+      expect(todo.find('.task-name').hasClass(todos[idx].done ? 'checked' : 'unchecked')).toBe(true)
+    })
+  })
 })
